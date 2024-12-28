@@ -3,108 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pratik Kumar's Portfolio</title>
+    <title>Pratik Kumar - Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #f5f5f5;
         }
-        header {
-            background: #6c63ff;
-            color: #fff;
-            padding: 10px 20px;
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+        .hero {
             text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #444;
-            padding: 10px;
-        }
-        nav a {
+            padding: 50px;
+            background: linear-gradient(90deg, #007bff, #6610f2);
             color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
         }
-        nav a:hover {
-            text-decoration: underline;
+        .card {
+            border: none;
+            transition: transform 0.3s;
         }
-        .container {
-            padding: 20px;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        .section h2 {
-            color: #6c63ff;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
+        .card:hover {
+            transform: scale(1.05);
         }
         footer {
+            background-color: #343a40;
+            color: #fff;
             text-align: center;
             padding: 10px;
-            background: #444;
-            color: white;
         }
-        .social-links a {
-            margin: 0 10px;
-            color: #6c63ff;
-            text-decoration: none;
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
         }
-        .social-links a:hover {
-            text-decoration: underline;
+        .animate {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: all 0.6s ease-in-out;
+        }
+        .animate.visible {
+            opacity: 1;
+            transform: translateX(0);
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Pratik Kumar</h1>
-        <p>Data Science Enthusiast | Project Manager | Web Developer</p>
-    </header>
-    
-    <nav>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Pratik Kumar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <div class="container">
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <p>I am a motivated Data Science student with experience in data analysis, project management, and creating data-driven solutions using tools like Python, SQL, and Tableau. I am passionate about solving real-world problems with data.</p>
-        </section>
-
-        <section id="experience" class="section">
-            <h2>Experience</h2>
-            <p><strong>CSRBOX Intern (June 2024 - July 2024):</strong> Developed a chatbot to promote awareness of Clean Water and Sanitation. Built a responsive webpage using Bootstrap and gained experience in web development and cloud storage.</p>
-        </section>
-
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="https://github.com/pskumar07/The-Coffee-House-Sales-Excel-Dashboard" target="_blank">The Coffee House Sales Dashboard</a>: Analyzes sales data to provide insights into store performance and customer behaviors.</li>
-                <li><a href="https://public.tableau.com/app/profile/pratik.kumar1308/viz/Chocolatebusinessdashboard/Dashboard1" target="_blank">Chocolate Business Dashboard</a>: Interactive Tableau dashboard for analyzing sales, shipments, and revenue.</li>
-            </ul>
-        </section>
-
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:kumarpratik2022@gmail.com">kumarpratik2022@gmail.com</a></p>
-            <p>Phone: +91 9403978440</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/kumarpratik2022/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/pskumar07" target="_blank">GitHub</a>
-            </div>
-        </section>
+    <div class="hero animate">
+        <img src="Images\PratikPhoto.jpg" alt="Pratik Kumar" class="profile-img">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Aspiring Data Scientist | Project Manager | Problem Solver</p>
+        <p>Location: Pune, India</p>
     </div>
 
+    <section id="about" class="container my-5 animate">
+        <h2>About Me</h2>
+        <p>I am Pratik Kumar, a motivated Data Science student specializing in data analysis and creating data-driven solutions. With a strong inclination towards project coordination and management, I have experience in Python, SQL, Tableau, and web development. I thrive on solving real-world problems and enjoy collaborating with teams to deliver impactful projects.</p>
+    </section>
+
+    <section id="projects" class="container my-5 animate">
+        <h2>Projects</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">The Coffee House Sales Dashboard</h5>
+                        <p class="card-text">An interactive dashboard analyzing sales data for actionable insights into performance and trends.</p>
+                        <a href="https://github.com/pskumar07/The-Coffee-House-Sales-Excel-Dashboard" target="_blank" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Chocolate Business Dashboard</h5>
+                        <p class="card-text">A Tableau dashboard featuring geospatial maps and filters to analyze sales and revenue.</p>
+                        <a href="https://public.tableau.com/app/profile/pratik.kumar1308/viz/Chocolatebusinessdashboard/Dashboard1" target="_blank" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="container my-5 animate">
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming Languages: Python, SQL</li>
+            <li>Tools: Tableau, Power BI</li>
+            <li>Project Management: Team Collaboration, Task Scheduling</li>
+            <li>Soft Skills: Communication, Team Coordination</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="container my-5 animate">
+        <h2>Contact</h2>
+        <p>Email: kumarpratik2022@gmail.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/kumarpratik2022" target="_blank">Pratik Kumar</a></p>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Pratik Kumar. All Rights Reserved.</p>
+        <p>&copy; 2024 Pratik Kumar</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const elements = document.querySelectorAll('.animate');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        elements.forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
