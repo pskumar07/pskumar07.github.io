@@ -43,3 +43,14 @@ footer {
     opacity: 1;
     transform: translateX(0);
 }
+.btn-download {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+.btn-download:hover {
+    background-color: #0400ff;
+}
